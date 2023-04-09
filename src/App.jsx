@@ -1,5 +1,5 @@
 import s from "./style.module.css";
-import { ExpenseInput } from "components/ExpenseInput/ExpenseInput";
+import { ExpenseInput } from "containers/ExpenseInput/ExpenseInput";
 
 export function App() {
   return (
