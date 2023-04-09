@@ -9,7 +9,7 @@ export function ExpenseInput(props) {
   const [expenseName, setExpenseName] = useState();
   function submit(e) {
     e.preventDefault();
-    dispatch(addExpenseAction({ expenseName, price }));
+    dispatch(addExpenseAction({ name: expenseName, price: price }));
     console.log("events", e);
   }
   return (
@@ -31,7 +31,7 @@ export function ExpenseInput(props) {
             className="form-control"
             placeholder="Ex: 3.99"
             name="price"
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={(e) => setPrice(parseInt(e.target.value))}
           />
         </div>
 
