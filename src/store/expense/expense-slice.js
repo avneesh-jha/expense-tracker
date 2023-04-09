@@ -8,4 +8,14 @@ export const expenseslice = createSlice({
       { name: "banana", price: 2.0 },
     ],
   },
+  reducers: {
+    addExpenseAction: (currenrSlice, value) => {
+      console.log("addExpenseAction done");
+      currenrSlice.expenseList.push(value.payload);
+    },
+    //
+    //
+  },
 });
+
+export const { addExpenseAction } = expenseslice.actions;
