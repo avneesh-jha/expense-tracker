@@ -10,7 +10,6 @@ export function ExpenseInput(props) {
   function submit(e) {
     e.preventDefault();
     dispatch(addExpenseAction({ name: expenseName, price: price }));
-    console.log("events", e);
   }
   return (
     <form onSubmit={submit}>

@@ -3,19 +3,20 @@ const { createSlice } = require("@reduxjs/toolkit");
 export const expenseslice = createSlice({
   name: "expenseSlice",
   initialState: {
-    expenseList: [
-      { name: "Apple", price: 1.0 },
-      { name: "banana", price: 2.0 },
-    ],
+    expenseList: [],
+    income: 100,
   },
   reducers: {
-    addExpenseAction: (currenrSlice, value) => {
+    addExpenseAction: (currentSlice, value) => {
       console.log("addExpenseAction done");
-      currenrSlice.expenseList.push(value.payload);
+      currentSlice.expenseList.push(value.payload);
+    },
+    addIncomeAction: (currentSlice, action) => {
+      currentSlice.income = action.payload;
     },
     //
     //
   },
 });
 
-export const { addExpenseAction } = expenseslice.actions;
+export const { addExpenseAction, addIncomeAction } = expenseslice.actions;
