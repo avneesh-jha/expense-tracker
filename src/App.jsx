@@ -1,3 +1,4 @@
+import { List } from "components/List/List";
 import s from "./style.module.css";
 import { ExpenseInput } from "containers/ExpenseInput/ExpenseInput";
 
@@ -13,7 +14,13 @@ export function App() {
           <ExpenseInput />
         </div>
         <div className={`col-11 col-md-6 col-lg-4 ${s.expense_list}`}>
-          Expense History
+          <List
+            items={[
+              { name: "Apple", price: 4 },
+              { name: "Oranges", price: 2 },
+              { name: "Guava", price: 1 },
+            ]}
+          />
           <div className={`col-12 ${s.expense_total}`}>ExpenseTotal</div>
         </div>
       </div>
