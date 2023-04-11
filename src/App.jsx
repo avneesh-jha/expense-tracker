@@ -2,6 +2,7 @@ import { IncomeInput } from "containers/IncomeInput/IncomeInput";
 import s from "./style.module.css";
 import { ExpenseInput } from "containers/ExpenseInput/ExpenseInput";
 import { ExpenseList } from "containers/ExpenseList/ExpenseList";
+import { ExpenseTotal } from "components/ExpenseTotal/ExpenseTotal";
 
 export function App() {
   return (
@@ -18,7 +19,9 @@ export function App() {
         </div>
         <div className={`col-11 col-md-6 col-lg-4 ${s.expense_list}`}>
           <ExpenseList />
-          <div className={`col-12 ${s.expense_total}`}>ExpenseTotal</div>
+          <div className={`col-12 ${s.expense_total}`}>
+            <ExpenseTotal />
+          </div>
         </div>
       </div>
     </div>
