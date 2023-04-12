@@ -3,6 +3,5 @@ import { useSelector } from "react-redux";
 
 export function ExpenseList() {
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
-  console.log(expenseList);
   return <List items={expenseList} />;
 }

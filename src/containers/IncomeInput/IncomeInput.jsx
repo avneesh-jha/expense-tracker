@@ -8,6 +8,7 @@ export function IncomeInput(props) {
   function setIncome(e) {
     dispatch(addIncomeAction(parseFloat(e.target.value)));
   }
+
   return (
     <div className="row justify-content-center mb-2">
       <div className={`col-6 ${s.label}`}>Income</div>
