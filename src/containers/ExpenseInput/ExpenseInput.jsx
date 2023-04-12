@@ -9,11 +9,12 @@ export function ExpenseInput(props) {
   const [expenseName, setExpenseName] = useState();
   function submit(e) {
     e.preventDefault();
-    dispatch(addExpenseAction({ name: expenseName, price: price }));
+    if (typeof price === "number" && typeof expenseName === "string") {
+      dispatch(addExpenseAction({ name: expenseName, price: price }));
+      e.target.reset();
+    }
   }
-  function resetInput(e) {
-    e.target.reset();
-  }
+
   return (
     <form onSubmit={submit}>
       <div className="row justify-content-center">
@@ -33,7 +34,7 @@ export function ExpenseInput(props) {
             className="form-control"
             placeholder="Ex: 3.99"
             name="price"
-            onChange={(e) => setPrice(parseInt(e.target.value))}
+            onChange={(e) => setPrice(parseFloat(e.target.value))}
           />
         </div>
 
