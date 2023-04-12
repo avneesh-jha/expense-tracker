@@ -11,6 +11,9 @@ export function ExpenseInput(props) {
     e.preventDefault();
     dispatch(addExpenseAction({ name: expenseName, price: price }));
   }
+  function resetInput(e) {
+    e.target.reset();
+  }
   return (
     <form onSubmit={submit}>
       <div className="row justify-content-center">
