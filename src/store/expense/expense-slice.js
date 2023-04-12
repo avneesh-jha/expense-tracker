@@ -1,6 +1,6 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
-export const expenseslice = createSlice({
+export const expenseSlice = createSlice({
   name: "expenseSlice",
   initialState: {
     expenseList: [],
@@ -19,4 +19,4 @@ export const expenseslice = createSlice({
   },
 });
 
-export const { addExpenseAction, addIncomeAction } = expenseslice.actions;
+export const { addExpenseAction, addIncomeAction } = expenseSlice.actions;
